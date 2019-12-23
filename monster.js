@@ -56,7 +56,7 @@ methods:
                 this.counter--;
                 if(this.counter==0)
                 {
-                    if(this.yrwid < this.mrwid)
+                    if(this.yrwid <= this.mrwid)
                     {
                         alert("You Have Lost the Game..");
                     }
@@ -77,7 +77,7 @@ methods:
                 this.counter--;
                 if(this.counter==0)
                 {
-                    if(this.yrwid < this.mrwid)
+                    if(this.yrwid <= this.mrwid)
                     {
                         alert("You Have Lost the Game..");
                         // location("monster_game.html");
@@ -114,7 +114,7 @@ methods:
                 this.counter--;
                 if(this.counter==0)
                 {
-                    if(this.yrwid < this.mrwid)
+                    if(this.yrwid <= this.mrwid)
                     {
                         alert("You Have Lost the Game..");
 
