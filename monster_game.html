@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <title>Dungeon Game</title>
+</head>
+<body>
+<script src="vue.js"></script>
+   <div class="container-fluid">
+   
+<div class="row">
+    <h1 style="text-align: center; font-size: 45px;">Dungeon Game</h1>
+</div>
+
+
+<div class="row"  id="devil" style="height: 200px; width: 2000px;">
+  <div class="col-sm-6" style="height: 200px; width: 900px;">
+    <h1 style="text-align: center; font-size: 35px;">Prince</h1>
+
+    <div  style="margin-left: 30%;margin-top: 50px;">
+        <div  :style="mystyle" ></div>
+        <h3 style="margin-left: 15%;">Your Progress: {{yrwid/4}} </h3>
+    </div>
+    
+  </div>
+
+  <div class="col-sm-6" style="height: 200px; width: 1000px;">
+    <h1 style="text-align: center; font-size: 35px;">Monster</h1>
+    <div style="margin-top: 50px;margin-left: 30%;">
+        <div  :style="monsterstyle" ></div>
+        <h3 style="margin-left: 15%;">Monster Progress: {{mrwid/4}} </h3>
+    </div>
+
+</div>
+
+
+<button style="width: 300px; height: 60px; font-size: 30px; border-radius: 30px;margin-left: 41%;" class="btn btn-danger"  
+v-on:click="show=true" v-if="show == false" > Start New Game</button>
+
+<template v-if="show" >
+    <div style="width: 300px; height: 300px;margin-left: 40%;margin-top: 5%;"> 
+<h2 style="text-align: center;">Moves Left:</h2>
+<h4 style="text-align: center; font-size: 125px;margin-top: 5%;">
+    {{counter}}
+</h4>
+
+
+    </div>
+    <button style="width: 200px; height: 60px; font-size: 25px; border-radius: 30px;margin-left: 20%;margin-top: 5%" class="btn btn-danger"  
+v-on:click="attack()" v-if="" > Attack</button>
+
+<button style="width: 200px; height: 60px; font-size: 25px; border-radius: 30px;margin-left: 5%;margin-top: 5%" class="btn btn-primary"  
+v-on:click="specialattack()" v-if="" > Special Attack</button>
+
+<button style="width: 200px; height: 60px; font-size: 25px; border-radius: 30px;margin-left: 5%;margin-top: 5%" class="btn btn-success"  
+v-on:click="heal()" v-if="" > Heal</button>
+
+<button style="width: 200px; height: 60px; font-size: 25px; border-radius: 30px;margin-left: 5%;margin-top: 5%" class="btn btn-danger"  
+v-on:click="show=false,giveup()"  > Give Up</button>
+
+
+</template>
+
+
+</div>
+
+  
+    
+
+<div style="margin-top: 33%;">
+    <h5 style="text-align: center; font-family: monospace; font-size: 30px">Made with <span style="color: red ;  font-size: 35px">♥</span> by Keshav Gupta</h5>
+</div>
+
+
+
+   </div>
+
+
+
+
+
+
+<script src="monster.js"></script>
+
+
+
+</body>
+</html>
